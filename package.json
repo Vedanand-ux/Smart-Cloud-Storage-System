@@ -1,0 +1,33 @@
+{
+  "name": "my-cloud-starter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "msw:prepare": "msw init public/ --save",
+    "start": "npm run msw:prepare && vite",
+    "test": "vitest",
+    "check:no-ts": "node ./scripts/check-no-ts.js"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^4.37.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.0.0",
+    "@testing-library/react": "^14.0.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.22",
+    "msw": "^2.12.2",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.0",
+    "vite": "^5.0.0",
+    "vitest": "^1.0.0"
+  },
+  "msw": {
+    "workerDirectory": "public"
+  }
+}
